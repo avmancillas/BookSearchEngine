@@ -5,13 +5,13 @@ import SearchBooks from './pages/SearchBooks';
 import SavedBooks from './pages/SavedBooks';
 import Navbar from './components/Navbar';
 
-
-
-function App() {
-  const client = new ApolloClient({
+const client = new ApolloClient({
   uri: '/graphql',
   cache: new InMemoryCache(),
-})
+});
+
+function App() {
+
   return (
     <ApolloProvider client={client}>
     <Router>
